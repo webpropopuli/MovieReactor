@@ -7,7 +7,8 @@ import Movie from './Movie'
 const movies = [
   {
     id: 1,
-    title: 'Star Wars'
+    title: 'Star Wars',
+    desc: 'A Space Opera'
   }, {
     id: 2,
     title: 'Spider Man'
@@ -36,7 +37,7 @@ class App extends Component {  // or extends React.Component
           <img src={logo} className="App-logo" alt="logo" />
         </header>
       
-        {movies.map((movie) => <Movie key={movie.id} mov={movie} /> )}      
+        {movies.map((movie) => <Movie key={movie.id} mov={movie} desc={movie.desc}/> )}      
       </div>
     );
   }
